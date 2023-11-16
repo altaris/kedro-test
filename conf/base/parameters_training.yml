@@ -1,0 +1,13 @@
+# This is a boilerplate parameters config generated for pipeline 'training'
+# using Kedro 0.18.14.
+#
+# Documentation for this file format can be found in "Parameters"
+# Link: https://docs.kedro.org/en/0.18.14/configuration/parameters.html
+
+model:
+  hidden_dim: 512
+datamodule:
+  test_size: 0.2
+  random_state: 3
+training:
+  max_epochs: 3

@@ -1,0 +1,42 @@
+# Here you can define all your data sets by using simple YAML syntax.
+#
+# Documentation for this file format can be found in "The Data Catalog"
+# Link: https://docs.kedro.org/en/stable/data/data_catalog.html
+
+companies_raw:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/companies.csv
+
+reviews_raw:
+  type: pandas.CSVDataset
+  filepath: data/01_raw/reviews.csv
+
+shuttles_raw:
+  type: pandas.ExcelDataset
+  filepath: data/01_raw/shuttles.xlsx
+
+companies_ds:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/companies.pq
+
+reviews_ds:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/reviews.pq
+
+shuttles_ds:
+  type: pandas.ParquetDataset
+  filepath: data/02_intermediate/shuttles.pq
+
+model_input_ds:
+  type: pandas.ParquetDataset
+  filepath: data/03_primary/model_input_ds.pq
+
+model:
+  type: kedro_test.dataset.TorchDataset
+  filepath: data/06_models/model.pt
+  versioned: True
+
+metrics:
+  type: tracking.MetricsDataset
+  filepath: data/09_tracking/metrics.json
+  versioned: True

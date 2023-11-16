@@ -1,0 +1,16 @@
+ipython
+jupyter
+jupyterlab
+jupyterlab_server
+kedro
+kedro-datasets[pandas]
+kedro-telemetry
+kedro-viz
+nbstripout
+openpyxl
+pytest
+pytest-cov
+pytest-mock
+pytorch_lightning
+scikit-learn
+torch
